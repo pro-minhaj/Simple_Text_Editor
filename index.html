@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,200,0,0" />
+    <title>Text Editor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="w-3/4 h-screen flex flex-col justify-center mx-auto font-serif">
+    <main class="bg-[#93c5fd] rounded-md px-20 pt-6 pb-10">
+        <h1 class="text-center text-2xl font-semibold">My Text Editor</h1>
+        <section class="bg-[#dbeafe] p-4 border-2 border-[#64748b] mt-4 rounded">
+            <div class="flex items-center justify-between pb-4 border-2 border-b-[#64748b]">
+                <div class="flex items-center gap-2">
+                    <span id="bold" class="material-symbols-outlined cursor-pointe text-3xl">
+                        format_bold
+                    </span>
+                    <span id="italic" class="material-symbols-outlined cursor-pointer text-3xl">
+                        format_italic
+                    </span>
+                    <span id="underline" class="material-symbols-outlined cursor-pointer text-3xl">
+                        format_underlined
+                    </span>
+                </div>
+                <div id="align-control" class="flex items-center gap-3">
+                    <span id="text-left" class="material-symbols-outlined cursor-pointer text-3xl item-click">
+                        format_align_left
+                    </span>
+                    <span id="text-center" class="material-symbols-outlined cursor-pointer text-3xl item-click">
+                        format_align_center
+                    </span>
+                    <span id="text-right" class="material-symbols-outlined cursor-pointer text-3xl item-click">
+                        format_align_right
+                    </span>
+                    <span id="text-justify" class="material-symbols-outlined cursor-pointer text-3xl item-click">
+                        format_align_justify
+                    </span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <input id="font-size" class="w-10 font-semibold bg-transparent focus:outline-none" value="17" type="number">
+                    <label class="text-[1.2rem] me-2" for="font-size">A</label>
+                    <input id="color" type="color">
+                </div>
+            </div>
+            <div class="mt-4 border-2 border-[#9ca3af] rounded bg-white w-full h-80">
+                <textarea id="text-field" class="w-full h-full p-2 focus:outline-none underline-offset-4" name=""  cols="30" rows="10"></textarea>
+            </div>
+        </section>
+    </main>
+
+    <script src="./js/text-Editor.js"></script>
+</body>
+</html>
